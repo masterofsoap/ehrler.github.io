@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Joe E</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1 class="title">My website</h1>
-        <p>Ill write something here eventually.</p>
-    </div>
-</body>
-</html>
+/* Container for the content */
+.container {
+    text-align: center;
+}
+
+/* Futuristic title styling */
+.title {
+    font-size: 4rem;
+    color: hsl(0, 0%, 0%);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+}
