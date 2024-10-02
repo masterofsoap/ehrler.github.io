@@ -1,33 +1,66 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #000000; /* Black background */
-    color: #FFFFFF; /* White text */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    background-color: #1a1a1a; /* Dark gray for contrast */
+    background-color: rgba(26, 26, 26, 0.8); 
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    border: 3px solid;
+    border-image: linear-gradient(to right, #ff6ec7, #4facfe) 1; 
+    box-sizing: border-box; 
+    animation: pacing 3s ease-in-out infinite;
+    z-index: 10; 
 }
 
-h1, h2, h3 {
-    color: #ffffff; /* Green text for headers */
+
+h1 {
+    background: linear-gradient(to right, #ff6ec7, #4facfe);
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+h1:hover {
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+
+}
+
+h2, h3 {
+    color: hwb(0 100% 0%);
+    text-align: center;
 }
 
 p {
     line-height: 1.6;
+    text-align: center;
 }
 
 ul, ol {
-    margin-left: 20px;
+    margin-left: 0;
+    text-align: center;
+    list-style-position: inside;
 }
 
 a {
-    color: #ffffff; /* Green links */
+    color: hwb(0 100% 0%);
     text-decoration: none;
 }
 
@@ -36,19 +69,36 @@ a:hover {
 }
 
 button {
-    background-color: hsla(0, 0%, 7%, 0.781);
+    background-color: #080808e9;
     color: white;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: hsl(177, 82%, 30%);
+    background-color: #080808e9;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border-image: linear-gradient(to right, #ff6ec7, #4facfe) 1;
+    transform: scale(1.05);
 }
 
 .featured-image {
     max-width: 100%;
     height: auto;
     margin-top: 10px;
+}
+
+
+@keyframes gradient-hover {
+    0% {
+        border-color: #ff6ec7;
+    }
+    100% {
+        border-color: #4facfe;
+    }
 }
