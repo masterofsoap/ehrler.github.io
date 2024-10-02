@@ -81,54 +81,12 @@ button {
 }
 
 button:hover {
-    background-color: #080808e9;
+    background-color: hsla(0, 0%, 3%, 0.349);
     border: 2px solid transparent;
     background-clip: padding-box;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     border-image: linear-gradient(to right, #ff6ec7, #4facfe) 1;
     transform: scale(1.05);
-}
-
-.featured-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-}
-
-
-@keyframes gradient-hover {
-    0% {
-        border-color: #ff6ec7;
-    }
-    100% {
-        border-color: #4facfe;
-    }
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: -100%; /* Start above the viewport */
-    left: 0;
-    width: 100%;
-    height: 200%; /* Extend below the viewport */
-    pointer-events: none; /* Allow clicks to pass through */
-    z-index: 1; /* Place behind the content */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 40%);
-    animation: rain 1.5s linear infinite; /* Quick animation for the subtle effect */
-}
-
-body {
-    position: relative; /* Ensure relative positioning for child elements */
-    overflow: hidden; /* Prevent scrolling */
-}
-body {
-    height: 100vh; /* Full height */
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000; /* Set a solid black background for the body */
 }
 
 .container {
