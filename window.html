@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Window</title>
+    <link rel="stylesheet" href="styles.css">
+    <div class="pour">
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+
+        <style>
+            .title {
+                font-size: 2.5em; /* Adjust size as needed */
+                opacity: 1;
+                transition: opacity 1s ease-in-out; /* Smooth transition for fading */
+            }
+            
+            .hidden {
+                opacity: 0; /* Hide element */
+            }
+            </style>
+            <style>
+                /* Specific styles for this page */
+                .fixed-container {
+                    width: 1300px;  /* Fixed width */
+                    height: 1300px; /* Fixed height */
+                    background: linear-gradient(45deg, #92387080, hsla(221, 61%, 39%, 0.37));
+                    border-radius: 10px; /* Rounded corners */
+                    padding: 20px; /* Inner spacing */
+                    display: flex; /* Use flexbox for alignment */
+                    flex-direction: column; /* Stack children vertically */
+                    justify-content: center; /* Center content vertically */
+                    align-items: center; /* Center content horizontally */
+                    margin: 0 auto; /* Center the container horizontally */
+                }
+                    h1 {
+                        background: linear-gradient(to right, #ffffff, hwb(0 100% 0%));
+                        background-clip: text;
+                        color: transparent;
+;
+                        font-size: 5rem;
+                        text-align: center;
+                        transition: all 0.4s ease;
+                    }
+            </style>
+    </div>    
+</head>
+<body>
+    <div class="lightning"></div>
+    <div class="fixed-container">
+        <h1 id="title">Oh</h1>
+        <script>
+            const titles = [
+                "Welcome",
+                "I wasnt expecting you",
+                "Stay and relax a bit",
+                ":)",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+            ];
+            
+            let currentIndex = 0;
+            
+            function cycleTitles() {
+                const titleElement = document.getElementById('title');
+                
+                // Fade out the current title
+                titleElement.classList.add('hidden');
+            
+                setTimeout(() => {
+                    // Update the title after fade out
+                    currentIndex = (currentIndex + 1) % titles.length; // Cycle through titles
+                    titleElement.textContent = titles[currentIndex];
+            
+                    // Fade in the new title
+                    titleElement.classList.remove('hidden');
+                }, 1000); // Time it takes to fade out (should match transition duration)
+            
+                // Set the next cycle
+                setTimeout(cycleTitles, 4000); // Change title every 4 seconds (3 seconds visible, 1 second fade out)
+            }
+            
+            // Start cycling titles
+            setTimeout(cycleTitles, 4000); // Start the first change after 4 seconds
+            </script>
+            
+</body>
+</html>
